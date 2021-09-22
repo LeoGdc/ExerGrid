@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(fundo4.jpg) ;
+    background-size: cover;
+}
+header{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    flex-grow: 1;
+}
+.galeria-container{
+    display: grid;
+    height: 100%;
+    gap: 10px;
+    grid-auto-rows: 20vh;
+    padding: 10px;
+   grid-template-areas:
+    "item1 item2 item2 item3"
+    "item1 item4 item5 item3"
+    "item1 item6 item8 item8"
+    "item1 item7 item8 item8"
+   ;
+   grid-auto-rows: 28vh;
+   padding: 10px;
+}
+.galeria-itens{
+    box-shadow: 5px 5px 5px purple ;
+    border: 2px solid black;
+}
+.galeria-itens:nth-child(1){grid-area:item1;}
+.galeria-itens:nth-child(2){grid-area:item2;}
+.galeria-itens:nth-child(3){grid-area:item3;}
+.galeria-itens:nth-child(4){grid-area:item4;}
+.galeria-itens:nth-child(5){grid-area:item5;}
+.galeria-itens:nth-child(6){grid-area:item6;}
+.galeria-itens:nth-child(7){grid-area:item7;}
+.galeria-itens:nth-child(8){grid-area:item8;}
+
+.galeria-itens img:hover{
+    transform: scale(1.1);
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
